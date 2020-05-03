@@ -8,19 +8,22 @@
 <body>
   <form action="/new" method="POST">
     <textarea rows="3" name="description" autofocus></textarea>
-    <button type="submit">👌</button>
-  </form>
-  <hr>
-  <form action="/stop" method="POST">
-    <button type="submit" class="stop">✋</button>
-    <br/>
-    <input type="date" name="date"/>
-    <input type="time" name="time"/>
-    <br/>
-    <input type="number" name="hours" class="time"/>
-    <span>hs</span>
-    <input type="number" name="minutes" class="time" />
-    <span>mins</span>
+    <div class="buttons">
+      <button type="submit">👌</button>
+      <a href="/summary">📋</a>
+      </form>
+      <form action="/stop" method="POST">
+      <button type="submit" class="stop">✋</button>
+      <div>
+        <input type="date" name="date" />
+        <input type="time" name="time" />
+        <br />
+        <input type="number" name="hours" class="time" />
+        <span>hs</span>
+        <input type="number" name="minutes" class="time" />
+        <span>mins</span>
+      </div>
+    </div>
   </form>
 </body>
 </html>

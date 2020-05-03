@@ -61,6 +61,49 @@ app.post('/stop', async (req, res) => {
   }
 })
 
+app.get('/summary', async (req, res) => {
+  try {
+    const logs = await Log.find({})
+    let html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8" />
+      <title>Life Logs</title>
+      <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+      <a href="/" style="display: initial; margin: 20px">👈</a>
+      <table>
+        <tr>
+          <th>Description</th>
+          <th>Duration</th>
+          <th>Started At</th>
+        </tr>`;
+    logs.forEach( log => {
+      if (log.duration) {
+        const totalMinutes = Math.floor(log.duration / 60000)
+        const hours = Math.floor(totalMinutes / 60)
+        const minutes = hours > 0 ? totalMinutes - (hours * 60) : totalMinutes
+        html += `
+        <tr>
+          <td>${log.description}</td>
+          <td>
+            ${hours > 0 ? hours + 'hs ' : ' '}
+            ${minutes} mins
+          </td>
+          <td>${log.startTime}</td>
+        </tr>
+        `
+      }
+    })
+    html += '</table></body></html>'
+    res.send(html)
+  } catch (err) {
+    res.send(err.message).status(500);
+  }
+})
+
 app.listen(3000, () => {
   console.log('listening on 3000')
 })

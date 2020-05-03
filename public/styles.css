@@ -16,7 +16,7 @@ textarea {
   0 3px 6px #d4ceff;
 }
 
-button {
+button, a {
   border-radius: 30px;
   background-color: #4c4cc4;
   padding: 12px 15px;
@@ -26,6 +26,8 @@ button {
   border: none;
   box-shadow: 0 5px 10px #d4ceff,
   0 3px 6px #d4ceff;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 hr {
@@ -39,4 +41,27 @@ hr {
 
 .time {
   width: 40px
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
 }
