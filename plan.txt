@@ -1,0 +1,23 @@
+Entrada: 
+  descrip
+  (hora comienzo, tiempo que llevó)
+
+- forma de ingresar una descrip de algo nuevo
+- cuando ingreso algo nuevo, marco el fin de lo anterior
+- forma de detener el último sin ingresar algo nuevo (night time) indicando la hora fin (me olvide)
+
+
+-------------------
+
+- crear bd en mongo local
+- crear repo de GH con proceso en node + express con rutas:
+
+/ emite el form con el field de descrip
+/new?descrip=descrip recibe la descrip de nueva entrada. Setea la hora de comienzo a "now" y tiempo a null
+  Si habia otra entrada con tiempo null, calcula la diferencia entre su hora de comienzo y "now" y se lo carga a tiempo
+/stop?date=date&&time=time emite un form con campo date opcional de hora fin
+  Si habia entrada con tiempo null, si tiene "time" se lo carga a tiempo
+                                    sino calcula la diferencia entre su hora de comienzo y "now"(o "date" si la recibe) y se lo carga a tiempo
+
+- crear bd en mongo de mi server
+- clonar repo de GH en mi server
