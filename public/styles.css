@@ -1,3 +1,12 @@
+.background {
+  width: 350px;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px #d4ceff,
+  0 3px 6px #d4ceff;
+}
+
 input {
   margin: 15px 0 0 20px
 }
@@ -6,7 +15,7 @@ textarea {
   padding: 10px;
   font-size: 16px;
   margin: 20px;
-  width: 500px;
+  width: 300px;
   border-radius: 10px;
   background-color: #4c4cc4;
   color: #d4ceff;
@@ -32,15 +41,35 @@ button, a {
 
 hr {
   margin: 20px;
+  border-color: #d4ceff;
 }
 
 .stop {
   display: inline;
   background-color: #c44c66c0;
+  margin: 8px 0 0 45px;
 }
 
+.time, .date, .dateTime {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #4c4cc4;
+  color: #d4ceff;
+  border: none;
+  box-shadow: 0 5px 10px #d4ceff,
+  0 3px 6px #d4ceff;
+}
+.date {
+  width: 150px;
+}
+
+.dateTime {
+  margin-left: 0px;
+  width: 105px;
+}
 .time {
-  width: 40px
+  width: 40px;
 }
 
 table {

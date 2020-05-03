@@ -6,24 +6,25 @@
   <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-  <form action="/new" method="POST">
-    <textarea rows="3" name="description" autofocus></textarea>
-    <div class="buttons">
-      <button type="submit">👌</button>
-      <a href="/summary">📋</a>
-      </form>
-      <form action="/stop" method="POST">
-      <button type="submit" class="stop">✋</button>
-      <div>
-        <input type="date" name="date" />
-        <input type="time" name="time" />
-        <br />
-        <input type="number" name="hours" class="time" />
-        <span>hs</span>
-        <input type="number" name="minutes" class="time" />
-        <span>mins</span>
+  <div class="background">
+    <form action="/new" method="POST">
+      <textarea rows="6" name="description" autofocus></textarea>
+      <div class="buttons">
+        <button type="submit">👌</button>
+        <a href="/summary">📋</a>
       </div>
-    </div>
-  </form>
+    </form>
+    <hr />
+    <form action="/stop" method="POST">
+      <input type="date" name="date" class="date" />
+      <input type="time" name="time" class="dateTime" />
+      <br />
+      <input type="number" name="hours" class="time" />
+      <span>hs</span>
+      <input type="number" name="minutes" class="time" />
+      <span>mins</span>
+      <button type="submit" class="stop">✋</button>
+    </form>
+  </div>
 </body>
 </html>
