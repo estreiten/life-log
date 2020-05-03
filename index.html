@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Life Log</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <form action="/new" method="POST">
+    <textarea rows="3" name="description"></textarea>
+    <button type="submit">👌</button>
+  </form>
+  <hr>
+  <form action="/stop" method="POST">
+    <button type="submit" class="stop">✋</button>
+    <br/>
+    <input type="date" name="date"/>
+    <input type="time" name="time"/>
+    <br/>
+    <input type="number" name="hours" class="time"/>
+    <span>hs</span>
+    <input type="number" name="minutes" class="time" />
+    <span>mins</span>
+  </form>
+</body>
+</html>

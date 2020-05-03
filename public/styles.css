@@ -1,0 +1,42 @@
+input {
+  margin: 15px 0 0 20px
+}
+
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin: 20px;
+  width: 500px;
+  border-radius: 10px;
+  background-color: #4c4cc4;
+  color: #d4ceff;
+  border: none;
+  resize: none;
+  box-shadow: 0 5px 10px #d4ceff,
+  0 3px 6px #d4ceff;
+}
+
+button {
+  border-radius: 30px;
+  background-color: #4c4cc4;
+  padding: 12px 15px;
+  font-size: 20px;
+  display: block;
+  margin: 0 20px;
+  border: none;
+  box-shadow: 0 5px 10px #d4ceff,
+  0 3px 6px #d4ceff;
+}
+
+hr {
+  margin: 20px;
+}
+
+.stop {
+  display: inline;
+  background-color: #c44c66c0;
+}
+
+.time {
+  width: 40px
+}
