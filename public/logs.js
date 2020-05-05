@@ -112,7 +112,7 @@ const labelIcon = (label) => {
     case 'learn': return '🧠'
     case 'sleep': return '🛌'
     case 'exercise': return '🏃‍♂'
-    case 'body care': return '🚿'
+    case 'care': return '🚿'
     case 'food': return '🍕'
     case 'love': return '❤️'
     case 'social': return '🧑‍🤝‍🧑'
