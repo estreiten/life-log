@@ -57,6 +57,13 @@ const getLogs = () => {
   }
 }
 
+const formatDate = (dateString) => {
+  const date = new Date(dateString)
+  const time = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+  console.log(date)
+  return `${date.toLocaleDateString([],{ day: 'numeric', month: 'short' })} ${time}`
+}
+
 const renderLogs = (logs) => {
   let html = `
     <tr>
@@ -86,7 +93,7 @@ const renderLogs = (logs) => {
             ${hours > 0 ? hours + 'hs ' : ' '}
             ${minutes} mins
           </td>
-          <td>${log.startTime}</td>
+          <td>${formatDate(log.startTime)}</td>
           <td><div class="tags">${labelIcons}</div></td>
         </tr>`
     }
