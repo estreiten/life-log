@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Life Logs</title>
+  <link href="styles.css" rel="stylesheet" />
+  <script type="text/javascript" src="logs.js"></script>
+</head>
+<body class="summary">
+  <div id="range" class="range">
+    <button onclick="filterByRange(this,'day')" class="selected">⌚ Today</button>
+    <button onclick="filterByRange(this,'week')" requestLogs()">📆 Week</a>
+    <button onclick="filterByRange(this,'month')" requestLogs()">📅 Month</a>
+    <button onclick="filterByRange(this,'all')" requestLogs()">🗃️ All</a>
+  </div>
+  <div class="labels">
+    <section>
+      <div class="group">
+        <div class="label" title="transition" onclick="filterByLabel(this)">🔄</div>
+        <div class="label" title="thinking" onclick="filterByLabel(this)">💡</div>
+        <div class="label" title="organization" onclick="filterByLabel(this)">📋</div>
+      </div>
+      <div class="group">
+        <div class="label" title="home" onclick="filterByLabel(this)">🏠</div>
+        <div class="label" title="finance" onclick="filterByLabel(this)">💰</div>
+        <div class="label" title="grosseries" onclick="filterByLabel(this)">🛒</div>
+      </div>
+    </section>
+    <section>
+      <div class="group">
+        <div class="label" title="management" onclick="filterByLabel(this)">💼</div>
+        <div class="label" title="dev" onclick="filterByLabel(this)">👨‍💻</div>
+        <div class="label" title="communication" onclick="filterByLabel(this)">💬</div>
+        <div class="label" title="learn" onclick="filterByLabel(this)">🧠</div>
+      </div>
+      <div class="group">
+        <div class="label" title="love" onclick="filterByLabel(this)">❤️</div>
+        <div class="label" title="social" onclick="filterByLabel(this)">🧑‍🤝‍🧑</div>
+      </div>
+    </section>
+    <section>
+      <div class="group">
+        <div class="label" title="sleep" onclick="filterByLabel(this)">🛌</div>
+        <div class="label" title="exercise" onclick="filterByLabel(this)">🏃‍♂️</div>
+        <div class="label" title="care" onclick="filterByLabel(this)">🚿</div>
+        <div class="label" title="food" onclick="filterByLabel(this)">🍕</div>
+      </div>
+      <div class="group">
+        <div class="label" title="read" onclick="filterByLabel(this)">📘</div>
+        <div class="label" title="write" onclick="filterByLabel(this)">✏️</div>
+      </div>
+    </section>
+    <section>
+      <div class="group">
+        <div class="label" title="tv" onclick="filterByLabel(this)">📺</div>
+        <div class="label" title="play" onclick="filterByLabel(this)">🕹️</div>
+        <div class="label" title="news" onclick="filterByLabel(this)">📰</div>
+      </div>
+      <div class="group">
+        <div class="label" title="null" onclick="filterByLabel(this)">🏷️</div>
+      </div>
+    </section>
+  </div>
+  <table>
+  </table>
+</body>
+</html>

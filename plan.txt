@@ -21,3 +21,17 @@ Entrada:
 
 - crear bd en mongo de mi server
 - clonar repo de GH en mi server
+
+--------------------------
+
+Agregar labels y filtros
+
+labels
+null 🏷️, 
+🔄 transition, 💡 thinking, 📋 organization,
+💼 management, 👨‍💻 dev, 💬 communication, 🧠 learn,
+sleep 🛌, 🏃‍♂️ exercise, 🚿 body care, 🍕 food, 
+❤️ love, 🧑‍🤝‍🧑 social,
+🏠 home, 💰 finance, 🛒 grosseries
+📺 tv, 🕹️ play, 📰 news, 
+📘 read, ✏️ write

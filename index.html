@@ -4,14 +4,63 @@
   <meta charset="UTF-8" />
   <title>Life Log</title>
   <link href="styles.css" rel="stylesheet" />
+  <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
   <div class="background">
     <form action="/new" method="POST">
       <textarea rows="6" name="description" autofocus></textarea>
       <div class="buttons">
-        <button type="submit">👌</button>
-        <a href="/summary">📋</a>
+        <div class="labels">
+          <section>
+            <div class="group">
+              <div class="label" title="transition" onclick="toggleLabel(this)">🔄</div>
+              <div class="label" title="thinking" onclick="toggleLabel(this)">💡</div>
+              <div class="label" title="organization" onclick="toggleLabel(this)">📋</div>
+            </div>
+            <div class="group">
+              <div class="label" title="home" onclick="toggleLabel(this)">🏠</div>
+              <div class="label" title="finance" onclick="toggleLabel(this)">💰</div>
+              <div class="label" title="grosseries" onclick="toggleLabel(this)">🛒</div>
+            </div>
+          </section>
+          <section>
+            <div class="group">
+              <div class="label" title="management" onclick="toggleLabel(this)">💼</div>
+              <div class="label" title="dev" onclick="toggleLabel(this)">👨‍💻</div>
+              <div class="label" title="communication" onclick="toggleLabel(this)">💬</div>
+              <div class="label" title="learn" onclick="toggleLabel(this)">🧠</div>
+            </div>
+            <div class="group">
+              <div class="label" title="love" onclick="toggleLabel(this)">❤️</div>
+              <div class="label" title="social" onclick="toggleLabel(this)">🧑‍🤝‍🧑</div>
+            </div>
+          </section>
+          <section>
+            <div class="group">
+              <div class="label" title="sleep" onclick="toggleLabel(this)">🛌</div>
+              <div class="label" title="exercise" onclick="toggleLabel(this)">🏃‍♂️</div>
+              <div class="label" title="care" onclick="toggleLabel(this)">🚿</div>
+              <div class="label" title="food" onclick="toggleLabel(this)">🍕</div>
+            </div>
+            <div class="group">
+              <div class="label" title="read" onclick="toggleLabel(this)">📘</div>
+              <div class="label" title="write" onclick="toggleLabel(this)">✏️</div>
+            </div>
+          </section>
+          <section>
+            <div class="group">
+              <div class="label" title="tv" onclick="toggleLabel(this)">📺</div>
+              <div class="label" title="play" onclick="toggleLabel(this)">🕹️</div>
+              <div class="label" title="news" onclick="toggleLabel(this)">📰</div>
+            </div>
+          </section>
+        </div>
+        <input id="labels" type="hidden" name="labels" value="">
+        <div class="actions">
+          <button type="submit">👌</button>
+          <a href="/summary" target="_blank">📋</a>
+        </div>
       </div>
     </form>
     <hr />
@@ -19,11 +68,13 @@
       <input type="date" name="date" class="date" />
       <input type="time" name="time" class="dateTime" />
       <br />
-      <input type="number" name="hours" class="time" />
-      <span>hs</span>
-      <input type="number" name="minutes" class="time" />
-      <span>mins</span>
-      <button type="submit" class="stop">✋</button>
+      <div class="time-line">
+        <input type="number" name="hours" class="time" />
+        <span>hs</span>
+        <input type="number" name="minutes" class="time" />
+        <span>mins</span>
+        <button type="submit" class="stop">✋</button>
+      </div>
     </form>
   </div>
 </body>

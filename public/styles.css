@@ -1,20 +1,20 @@
 .background {
   width: 350px;
-  background-color: aliceblue;
-  padding: 20px;
-  border-radius: 50px;
+  background-color: rgba(63, 50, 50, 0.13);
+  padding: 10px 10px 20px;
+  border-radius: 20px;
   box-shadow: 0 5px 10px #d4ceff,
   0 3px 6px #d4ceff;
 }
 
 input {
-  margin: 15px 0 0 20px
+  margin: 10px 0 0 10px
 }
 
 textarea {
   padding: 10px;
   font-size: 16px;
-  margin: 20px;
+  margin: 10px;
   width: 300px;
   border-radius: 10px;
   background-color: #4c4cc4;
@@ -31,34 +31,35 @@ button, a {
   padding: 12px 15px;
   font-size: 20px;
   display: block;
-  margin: 0 20px;
+  margin: 0 10px;
   border: none;
-  box-shadow: 0 5px 10px #d4ceff,
-  0 3px 6px #d4ceff;
+  box-shadow: 0 2px 5px #29296b,
+  0 1px 3px #29296b;
   cursor: pointer;
   text-decoration: none;
 }
 
 hr {
-  margin: 20px;
+  margin: 15px 10px;
   border-color: #d4ceff;
 }
 
 .stop {
-  display: inline;
   background-color: #c44c66c0;
-  margin: 8px 0 0 45px;
+  float: right;
+  box-shadow: 0 2px 5px #612532c0,
+  0 1px 3px #612532c0;
 }
 
 .time, .date, .dateTime {
   padding: 10px;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #4c4cc4;
   color: #d4ceff;
   border: none;
-  box-shadow: 0 5px 10px #d4ceff,
-  0 3px 6px #d4ceff;
+  box-shadow: 0 2px 5px #29296b,
+  0 1px 3px #29296b;
 }
 .date {
   width: 150px;
@@ -92,5 +93,93 @@ tr:nth-child(even) {
 .buttons {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
   align-items: start;
+  justify-content: space-between;
+}
+
+.labels {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.labels section {
+  margin: 5px 10px 0
+}
+
+.labels section .group:first-child {
+  margin-bottom: 20px
+}
+
+.label {
+  border-radius: 30px;
+  background-color: #a569dd;
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px #524b8d,
+  0 1px 3px #524b8d;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.label:last-child {
+  margin-bottom: 0;
+}
+
+.label.selected {
+  background-color: #20522f;
+  box-shadow: 0 1px 2px #20522f,
+  0 1px 3px #20522f;
+}
+
+.time-line {
+  margin-top: 15px
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tags .label {
+  cursor: default;
+  margin: 0 10px;
+}
+
+.range {
+  display: flex;
+  flex-direction: row;
+}
+
+.range .selected {
+  background-color: #20522f;
+  box-shadow: 0 1px 2px #20522f,
+  0 1px 3px #20522f;
+}
+
+.summary .labels {
+  align-items: unset;
+  justify-content: unset;
+  margin: 0;
+}
+
+.summary .labels section .group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px
+}
+
+.summary .labels section .group .label {
+  margin: 0 5px
 }
