@@ -33,5 +33,14 @@ null 🏷️,
 sleep 🛌, 🏃‍♂️ exercise, 🚿 body care, 🍕 food, 
 ❤️ love, 🧑‍🤝‍🧑 social,
 🏠 home, 💰 finance, 🛒 grosseries
-📺 tv, 🕹️ play, 📰 news, 
+📺 tv, 🕹️ play, 📰 news, 📻 podcast
 📘 read, ✏️ write
+
+------------------------------
+
+- Summary totals
+- Feedback messages on dialog
+- increase labels size
+- Summary description on two lines if necessary
+- "clean all filters" button
+- separate more the category groups

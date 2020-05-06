@@ -120,6 +120,7 @@ const labelIcon = (label) => {
     case 'finance': return '💰'
     case 'grosseries': return '🛒'
     case 'tv': return '📺'
+    case 'podcast': return '📻'
     case 'play': return '🕹️'
     case 'news': return '📰'
     case 'read': return '📘'
