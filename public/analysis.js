@@ -161,15 +161,19 @@ function dayClicked(evt) {
   drawBars(detail);
 }
 
-function drawBars(dayEl) {
-  $(dayEl).find('.tags').find('.tag').each(function (index) {
+function drawBars(el, small) {
+  $(el).find('.tags').find('.tag').each(function (index) {
     $(this).wrap('<div class="bar-container">')
     const bar = $('<div class="bar"></div>')
     bar.insertBefore(this)
     const color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
     bar.css('backgroundColor', color);
     const count = $(this).attr('ms');
-    bar.height(count / 60000);
+    let reducer = 60000
+    if (small) {
+      reducer *= 60
+    }
+    bar.height(count / reducer);
     // $(this).css('backgroundColor', color);
   })
 }
