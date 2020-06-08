@@ -150,7 +150,8 @@ function dayClicked(evt) {
   const dayEl = evt.currentTarget;
   // create detail to show on top
   const detail = $(dayEl).clone();
-  if (detail.hasClass('week')) {
+  const isWeek = detail.hasClass('week')
+  if (isWeek) {
     detail.find('>.tag').prepend('Week ')
   }
   detail.removeClass('day');
@@ -158,7 +159,7 @@ function dayClicked(evt) {
   detail.addClass('detail');
   $('body').append(detail);
   // draw bars on detail
-  drawBars(detail);
+  drawBars(detail, isWeek);
 }
 
 function drawBars(el, small) {
