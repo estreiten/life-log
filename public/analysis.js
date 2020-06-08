@@ -172,7 +172,7 @@ function drawBars(el, small) {
     const count = $(this).attr('ms');
     let reducer = 60000
     if (small) {
-      reducer *= 60
+      reducer *= 30
     }
     bar.height(count / reducer);
     // $(this).css('backgroundColor', color);
