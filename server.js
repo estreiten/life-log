@@ -71,6 +71,14 @@ app.get('/summary', async (req, res) => {
   }
 })
 
+app.get('/analysis', async (req, res) => {
+  try {
+    res.sendFile(__dirname + '/analysis.html')
+  } catch (err) {
+    res.send(err.message).status(500);
+  }
+})
+
 app.get('/logs', async (req, res) => {
   let logs = await Log.find({})
   try {
