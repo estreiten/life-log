@@ -1,7 +1,7 @@
 {
   "name": "life-log",
-  "version": "0.1.0",
-  "description": "Service to keep an activity log",
+  "version": "1.0.0",
+  "description": "Service for time tracking, including period summary and month details",
   "main": "server.js",
   "author": "Ezequiel Streitenberger <streitenberger.ezequiel@gmail.com>",
   "repository": {
